@@ -22,5 +22,10 @@ const addTask = e => {
     task.querySelector('button').addEventListener('click', removeTask);
 }
 
+const removeTask = () => {
+    const task = document.querySelector('.task')
+    ul.removeChild(task)
+    taskNumber.textContent = document.querySelectorAll('.task').length;
+}
 
 form.addEventListener('submit', addTask)
